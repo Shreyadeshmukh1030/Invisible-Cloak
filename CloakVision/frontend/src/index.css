@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-main: #0B1120;
+  --color-card: #16213E;
+  --color-accent: #00E5FF;
+  --color-accent-sec: #7C4DFF;
+  --font-inter: 'Inter', sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-bg-main);
+    color: white;
+    font-family: var(--font-inter);
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-poppins);
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    background-color: rgba(22, 33, 62, 0.8);
+    backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 229, 255, 0.1);
+  }
+
+  .glow-cyan {
+    text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.3);
+  }
+
+  .glow-purple {
+    text-shadow: 0 0 10px rgba(124, 77, 255, 0.5);
+    box-shadow: 0 0 15px rgba(124, 77, 255, 0.3);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-main);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-card);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
